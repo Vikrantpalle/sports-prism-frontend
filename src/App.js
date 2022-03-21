@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import LiveContainer from './LiveContainer';
+import axios from 'axios';
 
-function App() {
+
+
+class App extends React.Component{
+  
+  constructor(props){
+    super(props);
+    this.state={
+      isLoading: true,
+      data: [],
+    };
+    
+  }
+
+  componentDidMount() {
+    axios.get("/sports/"+this.props.sport).then(response => this.setState({data: response.data, isLoading: false}));
+  }
+
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {this.state.isLoading ? "loading..." : <LiveContainer matches={this.state.data.data || this.state.data.matches} /> }
     </div>
   );
+  }
 }
 
 export default App;
