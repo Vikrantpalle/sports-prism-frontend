@@ -1,7 +1,8 @@
 import React from 'react'
-import { Alert, Button, Col, Container, Form, FormGroup, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, FormGroup, Row } from 'react-bootstrap';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import './auth.css'
 
 class SignIn extends React.Component{
     constructor(props){
@@ -21,9 +22,9 @@ class SignIn extends React.Component{
     handleSubmit=()=> {
         axios.post('/signin',this.state.user)
            .then((res)=>{
-               this.setState({...this.state,validated: true})
+           
                localStorage.setItem('userData',JSON.stringify({username: res.data.message.name,token: res.data.token}));
-               window.location.reload();
+               this.setState({...this.state,validated: true})
             })
             .catch((error)=> {  
                 this.setState({...this.state,errors: {...error.response.data.errors}});
@@ -34,10 +35,11 @@ class SignIn extends React.Component{
     
     render(){
         return (
-          <Container fluid> 
-          {!localStorage.getItem('userData') && <Row>
-<Col className='col-md-4 mx-auto border p-3 bg-light'>
-              <Form noValidate validated={this.state.validated} style={{}} className='justify-content-center'>
+          <Container fluid className='h-100 row m-0 p-0'> 
+          {this.state.validated && <Navigate to="/"/>}
+          <Row className=' my-auto g-0'>
+<Col className='col-md-4 mx-auto bg-light border rounded p-3' >
+              <Form noValidate validated={this.state.validated} >
                   <FormGroup className='mb-3'>
                       <Form.Label>Email</Form.Label>
                       <Form.Control type='email' id="email" onChange={this.handleChange} isInvalid={this.state.errors.email || this.state.errors.user}/>
@@ -51,22 +53,16 @@ class SignIn extends React.Component{
                   <FormGroup className='mb-3'>
                       <Form.Check type='checkbox' label='Show password' onClick={()=> this.setState({...this.state,showPassword: !this.state.showPassword})}/>
                   </FormGroup>
-                  <Button variant='primary' onClick={this.handleSubmit}>
+                  <div className='text-center'>
+                  <Button variant='primary' className='mt-3' onClick={this.handleSubmit}>
+                 
                       Sign In
                   </Button>
+                  </div>
                  
               </Form>
               </Col>
-              </Row>}
-              {localStorage.getItem('userData') && <Row>
-                  <Col className='col-md-4 mx-auto m-3 p-0'>
-                      <Alert variant='success '>
-                          <Alert.Heading>Signed In</Alert.Heading>
-                          <hr/>
-                          <p>Go to <Link to="/">home</Link></p>
-                      </Alert>
-                  </Col>
-              </Row>}
+              </Row>
           </Container>
         );
     }
