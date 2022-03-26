@@ -8,7 +8,8 @@ class LiveContainer extends React.Component{
          var result=this.props.matches.reduce(function(rv,x) {
             
              if(x.league){ 
-             (rv[x.league.name]=rv[x.league.name] || []).push(x);}
+                 if(x.home_score && x.away_score){
+             (rv[x.league.name]=rv[x.league.name] || []).push(x);}}
              else if(x.series){
                 if(x.state==="LIVE"){
                 (rv[x.series.name]=rv[x.series.name] || []).push(x);

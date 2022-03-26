@@ -15,14 +15,14 @@ class LeagueMatchContainer extends React.Component{
 
   render() {
       return (
-            <div className='leagueContainer'>
+            <div className='leagueContainer' style={{fontFamily: 'Montserrat'}}>
                  <Container fluid className='fw-normal'> 
                  <Row xs="auto" style={{marginTop: '0',marginRight: '0'}}>
                  <Col className='header' onClick={()=> {this.setState({showMatches: !this.state.showMatches})}}>{this.props.header}</Col>
                  </Row>
                  </Container>
                  <Container fluid className='matchContainer fw-bold text-uppercase'>
-                 <Row xs={1} md={3} className="g-4" style={{marginTop: '0'}}>
+                 <Row xs={1} md={this.props.matches[0].home_team ? 3:2} className="g-4" style={{marginTop: '0'}}>
                      {this.state.showMatches && this.props.matches.map((match)=> {
                          if(match.home_team){
                             return(
