@@ -4,6 +4,7 @@ import LiveContainer from "./LiveContainer";
 import axios from "axios";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Loading from "./loading";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         {this.state.isLoading ? (
-          "loading..."
+          <Loading />
         ) : (
           <LiveContainer
             matches={this.state.data.data || this.state.data.matches}
