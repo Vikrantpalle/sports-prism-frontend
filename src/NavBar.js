@@ -13,16 +13,17 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div style={{ marginBottom: "10px" }}>
+      <div id="nav" style={{ marginBottom: "10px" }}>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="/">
             <img
               alt=""
-              src={require("./assets/logo.png")}
-              width="60"
+              src={require("./assets/WEBD.png")}
+              width="58"
               height="30"
               className="d-inline-block align-top"
-            />{" "}
+            />
+            {""}
             SPORTSPRISM
           </Navbar.Brand>
           <Nav className="me-auto">
