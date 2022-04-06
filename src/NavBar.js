@@ -14,7 +14,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div id="nav" style={{ marginBottom: "10px" }}>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="black" variant="dark">
           <Navbar.Brand href="/">
             <img
               alt=""
@@ -33,6 +33,7 @@ class NavBar extends React.Component {
             <Nav.Link href="/tennis">Tennis</Nav.Link>
             <Nav.Link href="/hockey">Hockey</Nav.Link>
             <Nav.Link href="/Aboutus">About Us</Nav.Link>
+            <Nav.Link href="/Contactus">Contact Us</Nav.Link>
           </Nav>
           <Nav>
             {console.log(JSON.parse(localStorage.getItem("userData")))}

@@ -1,0 +1,130 @@
+.body {
+    background-image: url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .head {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 4em;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 1px;
+    flex-flow: wrap;
+  }
+  #logo {
+    display: flex;
+    /* border: 5px solid black; */
+    flex-flow: wrap;
+    flex-grow: 3em;
+  }
+  #first {
+    height: 95px;
+    margin: 2px;
+    padding: 3px;
+    margin-top: 2px;
+  }
+  #header {
+    display: inline-flex;
+    color: transparent;
+    height: 60px;
+    width: 399px;
+  }
+  #img {
+    width: 71px;
+    height: 40px;
+  }
+  .box {
+    /* border: 4px solid black; */
+    margin-top: 160px;
+    margin-left: 44px;
+    width: 800px;
+    height: 500px;
+    padding-left: 570px;
+    padding-top: 12px;
+  }
+  #log {
+    padding-left: 33px;
+    padding-bottom: 2px;
+    color: whitesmoke;
+    font-size: 44px;
+  }
+  .email {
+    border-radius: 33px;
+    padding: 12px;
+    margin: 13px;
+    width: 330px;
+    /* background-color: transparent; */
+  }
+  .password {
+    display: inline-block;
+    border-radius: 33px;
+    padding: 12px;
+    margin: 13px;
+    width: 330px;
+    /* background-color: transparent; */
+  }
+  #show {
+    color: whitesmoke;
+    font-size: 18px;
+    padding-left: 3px;
+  }
+  #forgot {
+    margin: 2px;
+    font-size: 18px;
+    padding-left: 98px;
+  }
+  #for {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  #check {
+    padding-left: 16px;
+  }
+  #for:hover {
+    cursor: grab;
+    color: rgb(15, 223, 212);
+  }
+  /* #show:hover{
+        cursor:grab;
+        background-color: green;
+        color: white;
+    } */
+  .submit {
+    display: flex;
+    justify-content: center;
+    border-radius: 33px;
+    padding: 12px;
+    margin: 13px;
+    width: 130px;
+    margin-left: 120px;
+    /* background-color: transparent; */
+    background-color: green;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  #submit {
+    width: 91px;
+    margin-left: 151px;
+  }
+  #submituser {
+    width: auto;
+    margin-left: 109px;
+    text-decoration: none;
+  }
+  #submituser:hover {
+    color: black;
+    background-color: lightblue;
+    cursor: grab;
+  }
+  #submit:hover {
+    color: black;
+    background-color: lightblue;
+    cursor: grab;
+  }
+  a {
+    text-decoration: none;
+  }
+  
