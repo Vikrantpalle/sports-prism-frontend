@@ -48,7 +48,7 @@ class Home extends React.Component {
               sports and can enjoy live action from each sports.
             </p>
             <p class="lead mb-0">
-              <a href="#" class="text-white font-weight-bold">
+              <a href="/" class="text-white font-weight-bold">
                 Continue reading...
               </a>
             </p>

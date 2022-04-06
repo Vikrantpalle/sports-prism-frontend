@@ -1,0 +1,15 @@
+.about{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.profile{
+  text-decoration: none;
+}

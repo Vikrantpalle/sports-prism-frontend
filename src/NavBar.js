@@ -32,6 +32,7 @@ class NavBar extends React.Component {
             <Nav.Link href="/basketball">Basketball</Nav.Link>
             <Nav.Link href="/tennis">Tennis</Nav.Link>
             <Nav.Link href="/hockey">Hockey</Nav.Link>
+            <Nav.Link href="/Aboutus">About Us</Nav.Link>
           </Nav>
           <Nav>
             {console.log(JSON.parse(localStorage.getItem("userData")))}
