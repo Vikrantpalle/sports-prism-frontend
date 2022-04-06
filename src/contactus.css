@@ -1,0 +1,19 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-grow: 3;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  #textarea {
+    height: 200px;
+  }
+div#spacer{
+    height: 200px;
+}
