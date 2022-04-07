@@ -1,3 +1,8 @@
+### Installing dependencies
+
+Type "npm install" in the terminal to install all the required dependencies to run the app.
+Make sure to install all dependencies before running the app.
+
 ### npm start
 
 Type "npm start" in console to run app in development mode.
